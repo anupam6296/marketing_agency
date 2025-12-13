@@ -1,0 +1,82 @@
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--foreground);
+}
+
+.tableWrapper {
+    background: var(--background);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th,
+.table td {
+    padding: var(--space-4);
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    background: var(--secondary);
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.table td {
+    font-size: 0.95rem;
+    color: var(--foreground);
+}
+
+.messageCol {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--muted);
+}
+
+.empty {
+    text-align: center;
+    color: var(--muted);
+    padding: var(--space-8) !important;
+}
+
+/* Status Colors */
+.select {
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.new {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.contacted {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.won {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.lost {
+    background: #fee2e2;
+    color: #991b1b;
+}
