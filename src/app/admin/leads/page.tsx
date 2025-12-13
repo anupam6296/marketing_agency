@@ -44,7 +44,7 @@ export default async function LeadsPage() {
                                 <td colSpan={7} className={styles.empty}>No leads found.</td>
                             </tr>
                         ) : (
-                            leads.map((lead) => (
+                            leads.map((lead: LeadRow) => (
                                 <tr key={lead.id}>
                                     <td>{lead.name}</td>
                                     <td><a href={`mailto:${lead.email}`}>{lead.email}</a></td>
