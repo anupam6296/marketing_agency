@@ -1,6 +1,4 @@
-import { getPrisma } from '@/db/prisma';
-
-// Minimal shape used by the table; avoids relying on generated Prisma types at build time
+// Database disabled for now: show a stub UI
 type LeadRow = {
     id: string;
     name: string;
@@ -17,10 +15,7 @@ import { LeadStatusSelector } from './LeadStatusSelector'; // Client component
 export const dynamic = 'force-dynamic';
 
 export default async function LeadsPage() {
-    const prisma = getPrisma();
-    const leads: LeadRow[] = await prisma.lead.findMany({
-        orderBy: { createdAt: 'desc' },
-    });
+    const leads: LeadRow[] = [];
 
     return (
         <div>

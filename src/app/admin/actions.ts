@@ -1,19 +1,15 @@
 'use server';
 
-import { getPrisma } from '@/db/prisma';
 import { revalidatePath } from 'next/cache';
 
+// DB disabled for now: stub the action to succeed and revalidate.
 export async function updateLeadStatus(id: string, status: string) {
     try {
-        const prisma = getPrisma();
-        await prisma.lead.update({
-            where: { id },
-            data: { status },
-        });
+        console.log('updateLeadStatus stubbed', { id, status });
         revalidatePath('/admin/leads');
         return { success: true };
     } catch (error) {
-        console.error('Failed to update status:', error);
-        return { success: false, error: 'Database error' };
+        console.error('Failed to update status (stub):', error);
+        return { success: false, error: 'Unavailable in preview' };
     }
 }

@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
-import { getPrisma } from '@/db/prisma';
 
 export async function POST(request: Request) {
     try {
-        const prisma = getPrisma();
         const body = await request.json();
         const { name, email, company, budget, message } = body;
 
@@ -12,18 +10,10 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const lead = await prisma.lead.create({
-            data: {
-                name,
-                email,
-                company,
-                budget,
-                message,
-                source: 'website',
-            },
-        });
-
-        return NextResponse.json({ success: true, leadId: lead.id });
+        // DB disabled for deployment preview. Pretend success.
+        const fakeId = 'stub-' + Math.random().toString(36).slice(2, 10);
+        console.log('Lead submission (stubbed, no DB):', { name, email, company, budget, message });
+        return NextResponse.json({ success: true, leadId: fakeId });
     } catch (error) {
         console.error('Error creating lead:', error);
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
