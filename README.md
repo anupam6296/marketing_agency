@@ -4,12 +4,12 @@ this is the portfolio for marketing agency
 =======
 # Dimagination - Premium Marketing Agency Website
 
-A high-performance, design-led website for a digital marketing agency, built with Next.js 14, Tailwind-free CSS (Vanilla Modules), and Prisma.
+A high-performance, design-led website for a digital marketing agency, built with Next.js 14, Tailwind-free CSS (Vanilla Modules), and .
 
 ## Features
 
 - **Premium Design System**: Glassmorphism, smooth animations, and responsive layouts using CSS Modules.
-- **Lead Capture**: Functional contact forms storing data to PostgreSQL via Prisma.
+- **Lead Capture**: Functional contact forms storing data to  via .
 - **Admin Dashboard**: Internal dashboard to view and manage leads.
 - **CMS-ready**: Architecture set up for Blog and Case Studies management (currently using mock data for speed).
 - **SEO Optimized**: Metadata and semantic HTML structure.
@@ -19,8 +19,8 @@ A high-performance, design-led website for a digital marketing agency, built wit
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS Modules (Variables-based Design System)
-- **Database**: PostgreSQL
-- **ORM**: Prisma
+- ****: 
+- **ORM**: 
 - **Icons**: Lucide React
 
 ## Getting Started
@@ -30,15 +30,15 @@ A high-performance, design-led website for a digital marketing agency, built wit
     npm install
     ```
 
-2.  **Database Setup**
-    Ensure you have PostgreSQL running. Update `.env`:
+2.  ** Setup**
+    Ensure you have  running. Update `.env`:
     ```env
-    DATABASE_URL="postgresql://user:password@localhost:5432/dimagination?schema=public"
+    _URL="://user:password@localhost:5432/dimagination?schema=public"
     ```
     Then run migrations:
     ```bash
-    npx prisma generate
-    npx prisma db push
+    npx  generate
+    npx  db push
     ```
 
 3.  **Run Development Server**
@@ -54,8 +54,8 @@ A high-performance, design-led website for a digital marketing agency, built wit
     - `ui`: Core atoms (Button, Inputs).
     - `layout`: Header, Footer.
     - `home`, `contact`, etc.: Feature-specific components.
-- `src/db`: Prisma client instance.
-- `prisma`: Database schema.
+- `src/db`:  client instance.
+- ``:  schema.
 
 ## Admin Access
 
@@ -68,3 +68,6 @@ Navigate to `/admin/leads` to view submitted leads.
 2.  Start production server: `npm start`
 3.  Recommended host: Vercel (zero config).
 >>>>>>> development
+
+
+
