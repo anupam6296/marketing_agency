@@ -1,0 +1,130 @@
+.page {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-24);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glass-shadow);
+    border-color: var(--accent);
+}
+
+.iconWrapper {
+    color: var(--accent);
+    margin-bottom: var(--space-6);
+    background: var(--secondary);
+    width: fit-content;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+}
+
+.content {
+    flex: 1;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.cardDesc {
+    color: var(--muted);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+.features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.9rem;
+    color: var(--foreground);
+}
+
+.check {
+    color: var(--accent);
+}
+
+.cta {
+    text-align: center;
+    background: var(--secondary);
+    padding: var(--space-12);
+    border-radius: var(--radius-lg);
+}
+
+.cta h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.cta p {
+    color: var(--muted);
+    margin-bottom: var(--space-8);
+    font-size: 1.2rem;
+}

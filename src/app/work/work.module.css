@@ -1,0 +1,116 @@
+.page {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.header {
+    margin-bottom: var(--space-16);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--muted);
+    max-width: 600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-24);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    /* Group hover logic handled by child selectors */
+}
+
+.imagePlaceholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--muted);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .imagePlaceholder {
+    transform: scale(0.98);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.arrow {
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: all 0.3s ease;
+    color: var(--accent);
+}
+
+.card:hover .arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.excerpt {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.linkText {
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: var(--space-2);
+}
+
+.cta {
+    text-align: center;
+    padding: var(--space-12);
+    background: var(--secondary);
+    border-radius: var(--radius-lg);
+}
+
+.cta h2 {
+    margin-bottom: var(--space-8);
+    font-size: 2rem;
+    font-weight: 700;
+}

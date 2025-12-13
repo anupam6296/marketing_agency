@@ -1,0 +1,155 @@
+.page {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: var(--space-16);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-8);
+    color: var(--foreground);
+}
+
+.story {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.story b {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.valuesSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-24);
+}
+
+@media (min-width: 768px) {
+    .valuesSection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.valueCard {
+    background: var(--secondary);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+}
+
+.valueCard h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.valueCard p {
+    color: var(--muted);
+}
+
+.teamSection {
+    margin-bottom: var(--space-24);
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-12);
+    color: var(--foreground);
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+@media (min-width: 640px) {
+    .teamGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.memberCard {
+    text-align: center;
+}
+
+.avatarPlaceholder {
+    width: 120px;
+    height: 120px;
+    background: var(--secondary);
+    border-radius: 50%;
+    margin: 0 auto var(--space-4);
+    border: 2px solid var(--border);
+}
+
+.memberName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.memberRole {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+}
+
+.memberBio {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.ctaSection {
+    text-align: center;
+    background: linear-gradient(135deg, var(--secondary), var(--background));
+    padding: var(--space-12);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.ctaSection h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--foreground);
+}
+
+.ctaSection p {
+    color: var(--muted);
+    margin-bottom: var(--space-8);
+}
+
+.ctaActions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+}

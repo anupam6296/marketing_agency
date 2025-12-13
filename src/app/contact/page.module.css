@@ -1,0 +1,138 @@
+.page {
+    padding: var(--space-12) 0 var(--space-24);
+    background:
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: var(--space-4);
+    background: linear-gradient(135deg, var(--foreground) 0%, var(--muted) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--muted);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.content {
+    display: grid;
+    gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr 1.5fr;
+        align-items: start;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.contactCard,
+.calendarCard {
+    background: var(--secondary);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.contactCard:hover,
+.calendarCard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.contactCard h3,
+.calendarCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--foreground);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+    color: var(--muted);
+    transition: all 0.2s ease;
+}
+
+.item:hover {
+    transform: translateX(5px);
+}
+
+.item a {
+    transition: color 0.2s;
+}
+
+.item a:hover {
+    color: var(--accent);
+}
+
+.icon {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.calendarCard p {
+    color: var(--muted);
+    margin-bottom: var(--space-6);
+}
+
+.calendarPlaceholder {
+    height: 200px;
+    background: var(--background);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    gap: var(--space-2);
+    transition: all 0.3s ease;
+}
+
+.calendarPlaceholder:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
