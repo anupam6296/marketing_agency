@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/db/prisma';
+import { getPrisma } from '@/db/prisma';
 
 export async function POST(request: Request) {
     try {
+        const prisma = getPrisma();
         const body = await request.json();
         const { name, email, company, budget, message } = body;
 

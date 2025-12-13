@@ -1,10 +1,11 @@
 'use server';
 
-import { prisma } from '@/db/prisma';
+import { getPrisma } from '@/db/prisma';
 import { revalidatePath } from 'next/cache';
 
 export async function updateLeadStatus(id: string, status: string) {
     try {
+        const prisma = getPrisma();
         await prisma.lead.update({
             where: { id },
             data: { status },
